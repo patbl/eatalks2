@@ -7,8 +7,6 @@ class Builders::RssParser < SiteBuilder
       # Store podcast metadata
       site.data[:podcast] = {
         title: yaml_data['podcast']['title'],
-        description: yaml_data['podcast']['description'],
-        author: yaml_data['podcast']['author'],
         image: yaml_data['podcast']['image'],
         copyright: yaml_data['podcast']['copyright']
       }

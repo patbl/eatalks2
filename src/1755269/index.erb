@@ -7,8 +7,6 @@ title: Home
   <div class="hero-content">
     <img src="<%= site.data.podcast[:image] %>" alt="<%= site.data.podcast[:title] %>" class="podcast-image">
     <h1><%= site.data.podcast[:title] %></h1>
-    <p class="tagline"><%= site.data.podcast[:description] %></p>
-    <p class="author">Hosted by <%= site.data.podcast[:author] %></p>
     <p class="rss-link">
       <a href="/1755269.rss" class="button button-secondary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 6px;">
@@ -51,10 +49,5 @@ title: Home
     <div class="view-all">
       <a href="/1755269/episodes" class="button">View All Episodes</a>
     </div>
-  </section>
-
-  <section class="about">
-    <h2>About the Podcast</h2>
-    <p><%= site.data.podcast[:description] %></p>
   </section>
 </div>
