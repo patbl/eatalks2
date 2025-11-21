@@ -173,64 +173,88 @@ body {
   color: var(--accent-color);
 }
 
-/* Episodes List (All Episodes Page) */
-.episodes-list {
-  max-width: 900px;
+/* Episodes Table (All Episodes Page) */
+.episodes-table {
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-.episode-item {
   background: var(--bg-color);
   border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
+  overflow: hidden;
   box-shadow: var(--shadow);
+  border-collapse: collapse;
   border: 1px solid var(--border-color);
-  transition: box-shadow 0.2s;
 }
 
-.episode-item:hover {
-  box-shadow: var(--shadow-lg);
+.episodes-table thead {
+  background: var(--primary-color);
+  color: white;
 }
 
-.episode-meta {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1rem;
+.episodes-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
   font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.episode-meta time {
-  color: var(--text-light);
+.episodes-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.15s;
 }
 
-.episode-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+.episodes-table tbody tr:last-child {
+  border-bottom: none;
 }
 
-.episode-content h2 a {
+.episodes-table tbody tr:hover {
+  background-color: var(--bg-light);
+}
+
+.episodes-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.col-number {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.col-title {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+}
+
+.col-title a {
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.episode-content h2 a:hover {
+.col-title a:hover {
   color: var(--secondary-color);
 }
 
-.episode-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
+.col-date {
+  width: 120px;
+  white-space: nowrap;
 }
 
-.duration {
+.col-date time {
   color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.col-duration {
+  width: 100px;
+  text-align: right;
   font-size: 0.875rem;
 }
 
@@ -427,5 +451,33 @@ body {
   .episode-info {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  /* Mobile table adjustments */
+  .episodes-table th,
+  .episodes-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .col-number {
+    width: 40px;
+  }
+
+  .col-title {
+    max-width: none;
+  }
+
+  .col-date {
+    width: 90px;
+  }
+
+  .col-date time {
+    font-size: 0.75rem;
+  }
+
+  .col-duration {
+    width: 70px;
+    font-size: 0.75rem;
   }
 }
