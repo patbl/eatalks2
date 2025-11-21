@@ -65,13 +65,6 @@ The site maintains compatibility with Buzzsprout's URL structure:
 - Episode list: `/1755269/episodes/`
 - Individual episodes: `/1755269/episodes/{slug}/`
 
-### Helpers
-
-Custom helpers are defined in `plugins/builders/helpers.rb`:
-- `format_duration(duration)`: Converts seconds to HH:MM:SS or MM:SS format
-- `truncate(text, length)`: Truncates text with smart word boundaries
-- `slugify(text)`: Converts text to URL-safe slugs
-
 ### Templates
 
 - Template engine: ERB (configured in `config/initializers.rb`)

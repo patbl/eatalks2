@@ -49,20 +49,6 @@ body {
   line-height: 1.2;
 }
 
-.tagline {
-  font-size: 1.25rem;
-  opacity: 0.95;
-  margin-bottom: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.author {
-  font-size: 1rem;
-  opacity: 0.85;
-  font-style: italic;
-}
 
 /* Container */
 .container {
@@ -411,31 +397,10 @@ body {
   margin-top: 3rem;
 }
 
-/* About Section */
-.about {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: var(--bg-color);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
   }
 
   .podcast-image {

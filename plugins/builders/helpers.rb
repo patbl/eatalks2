@@ -21,14 +21,5 @@ class Builders::Helpers < SiteBuilder
         text[0...length].gsub(/\s\w+\s*$/, '...') + '...'
       end
     end
-
-    helper :slugify do |text|
-      text.downcase
-        .gsub(/[^\w\s-]/, '')
-        .gsub(/\s+/, '-')
-        .gsub(/-+/, '-')
-        .gsub(/^-|-$/, '')
-        .slice(0, 100)
-    end
   end
 end

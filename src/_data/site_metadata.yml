@@ -5,7 +5,6 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: EA Talks
-tagline: Presentations and discussions on Effective Altruism
 email: contact@eatalks.org
 description: >-
   Effective Altruism is a social movement dedicated to finding ways you can best help others. EA Talks features presentations and discussions on pandemic prevention, charity entrepreneurship, AI safety, animal welfare, global health, and more.
