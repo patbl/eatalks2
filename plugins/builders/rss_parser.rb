@@ -1,18 +1,13 @@
 class Builders::RssParser < SiteBuilder
   def build
     hook :site, :pre_render do |site|
-      # Load podcast data from YAML file
-      yaml_data = site.data.podcast_data
-
-      # Store podcast metadata
       site.data[:podcast] = {
-        title: yaml_data['podcast']['title'],
-        image: yaml_data['podcast']['image']
+        title: site.data.podcast['title'],
+        image: site.data.podcast['image']
       }
 
-      # Parse episodes and add S3 audio URLs
-      episodes = yaml_data['episodes'].map do |item|
-        slug = item['slug']
+      episodes = site.data.episodes.map do |episode|
+        slug = episode['slug']
 
         # Generate S3 audio URL
         s3_audio_url = if slug
@@ -22,12 +17,12 @@ class Builders::RssParser < SiteBuilder
         end
 
         {
-          title: item['title'],
-          description: item['description'],
-          summary: item['summary'],
+          title: episode['title'],
+          description: episode['description'],
+          summary: episode['summary'],
           audio_url: s3_audio_url,
-          duration: item['duration'],
-          pub_date: Time.parse(item['pub_date']),
+          duration: episode['duration'],
+          pub_date: Time.parse(episode['pub_date']),
           slug: slug
         }
       end

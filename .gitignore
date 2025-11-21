@@ -5,7 +5,7 @@ output
 .routes.json
 
 # Podcast data (fetched from S3)
-src/_data/podcast_data.yml
+src/_data/episodes.yml
 
 # Dependency folders
 node_modules

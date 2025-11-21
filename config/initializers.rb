@@ -24,6 +24,14 @@ Bridgetown.configure do |config|
     base_path "/eatalks2"
   end
 
+  path = File.join(config.source, '_data', 'episodes.yml')
+  unless File.exist?(path)
+    require 'open-uri'
+    URI.open('https://eatalks.s3.us-east-2.amazonaws.com/episodes.yml') do |file|
+      File.write(path, file.read)
+    end
+  end
+
   # Other options you might want to investigate:
 
   # See list of timezone values here:

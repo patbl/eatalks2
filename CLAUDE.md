@@ -48,7 +48,7 @@ rake test
 
 The site uses a custom builder system to transform podcast data into episode pages:
 
-1. **Data Source**: `src/_data/podcast_data.yml` contains podcast metadata and all episode information (titles, descriptions, summaries, slugs, durations, publication dates)
+1. **Data Source**: `src/_data/episodes.yml` contains podcast metadata and all episode information (titles, descriptions, summaries, slugs, durations, publication dates)
 
 2. **RSS Parser Builder**: `plugins/builders/rss_parser.rb` runs at build time via the `:site, :pre_render` hook to:
    - Load podcast data from YAML
@@ -97,7 +97,7 @@ The site maintains compatibility with Buzzsprout's URL structure:
 
 ## Working with Episodes
 
-To add or modify episodes, update `src/_data/podcast_data.yml`. The builder will automatically:
+To add or modify episodes, update `src/_data/episodes.yml`. The builder will automatically:
 - Generate the audio URL from the slug
 - Create episode pages
 - Update the episode list
