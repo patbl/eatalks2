@@ -55,7 +55,6 @@ class Builders::RssFetcher < SiteBuilder
 
       # Add the RSS feed as a resource
       add_resource :rss, '1755269.rss' do
-        layout :none
         content rss.to_s
         permalink '/1755269.rss'
       end
