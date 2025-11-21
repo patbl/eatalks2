@@ -4,6 +4,9 @@ output
 .bridgetown-metadata
 .routes.json
 
+# Podcast data (fetched from S3)
+src/_data/podcast_data.yml
+
 # Dependency folders
 node_modules
 
