@@ -29,7 +29,8 @@ class Builders::RssParser < SiteBuilder
           audio_url: s3_audio_url,
           duration: episode['duration'],
           pub_date: Time.parse(episode['pub_date']),
-          slug: slug
+          slug: slug,
+          enclosure_length: episode['enclosure_length']
         }
       end
 

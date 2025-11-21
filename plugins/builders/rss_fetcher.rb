@@ -45,7 +45,7 @@ class Builders::RssFetcher < SiteBuilder
             # Enclosure (audio file)
             item.enclosure.url = episode[:audio_url]
             item.enclosure.type = "audio/mpeg"
-            item.enclosure.length = 0 # We don't have file sizes in the data
+            item.enclosure.length = episode.fetch(:enclosure_length)
 
             # iTunes duration (can be integer seconds as string)
             item.itunes_duration = episode[:duration].to_s
