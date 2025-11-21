@@ -18,12 +18,6 @@ Bridgetown.configure do |config|
   # Available options are `erb` (default), `serbea`, or `liquid`
   template_engine "erb"
 
-  # Set base_path and URL for GitHub Pages deployment
-  if Bridgetown.env.production?
-    url "https://patbl.github.io"
-    base_path "/eatalks2"
-  end
-
   path = File.join(config.source, '_data', 'episodes.yml')
   unless File.exist?(path)
     require 'open-uri'
