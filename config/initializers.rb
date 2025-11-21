@@ -57,6 +57,9 @@ Bridgetown.configure do |config|
   #
   # config.autoload_paths << "models"
 
+  # Set production URL (development defaults to http://localhost:4000)
+  config.url = "https://www.eatalks.org" if ENV["BRIDGETOWN_ENV"] == "production"
+
   # If you find you're having trouble using the new Fast Refresh feature in development,
   # you can disable it to force full rebuilds instead:
   #

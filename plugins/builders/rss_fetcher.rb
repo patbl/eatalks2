@@ -11,7 +11,7 @@ class Builders::RssFetcher < SiteBuilder
       rss = RSS::Maker.make("2.0") do |maker|
         # Channel-level information
         maker.channel.title = podcast[:title]
-        maker.channel.link = "https://patbl.github.io/eatalks2/"
+        maker.channel.link = "#{site.config.url}/"
         maker.channel.description = podcast[:description]
         maker.channel.language = podcast[:language]
 
@@ -36,7 +36,7 @@ class Builders::RssFetcher < SiteBuilder
         episodes.each do |episode|
           maker.items.new_item do |item|
             item.title = episode[:title]
-            item.link = "https://patbl.github.io/eatalks2/1755269/episodes/#{episode[:slug]}/"
+            item.link = "#{site.config.url}/1755269/episodes/#{episode[:slug]}/"
             item.description = episode[:description]
             item.pubDate = episode[:pub_date]
             item.guid.content = episode[:audio_url]
